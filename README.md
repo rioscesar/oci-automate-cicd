@@ -45,3 +45,4 @@ export TF_VAR_ssh_authorized_private_key=$(cat userdata/ssh_key.ssh)
 #### DESTROY EVERYTHING!
 
 ###### terraform destroy 
+
