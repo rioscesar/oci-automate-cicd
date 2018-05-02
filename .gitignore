@@ -1,0 +1,8 @@
+*.*~
+*.*#
+userdata/
+env.sh
+*.tfstate*
+*.backup
+*.terraform*
+*.tfstate*
