@@ -6,4 +6,4 @@ This directory needs to be populated with local keyfiles:
 4) eshneken-opc:  private key (RSA) for BMCS opc user
 5) eshneken-opc.pub:  public key (RSA) corresponding to #4 private key file
 
-Once the local directory has all of these, the userdata directory needs to be moved to the ~opc directory on the Jenkins buildserver.
+Once the local directory has all of these, the userdata directory will be copied to the root /home/opc of the Jenkins Server.
