@@ -27,12 +27,10 @@ export TF_VAR_docker_user="demouser"
 export TF_VAR_docker_password=""
 ```
   
-## Missing directories:
+## Missing directories :
   * userdata
-    - APIkey.pem
-    - APIkey_public.pem
-    - test_ssh
-    - test_ssh.pub
+    
+## Check the userdata directory for more information on what to add. 
 
 #### The userdata directory contains your APIkey.pem (logs you into your cloud account) as well as your public and private ssh keys you will use to log into your newly created instances. If you need help creating either of these take a look at Oracle's documentation: https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm.
   * Create the APIkey.pem file. 
