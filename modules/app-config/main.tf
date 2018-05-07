@@ -15,6 +15,10 @@ resource "null_resource" "docker-registry-config" {
   provisioner "local-exec" {
     command = "echo '${var.public-ip}:5000' > userdata/docker_registry_ip_and_port.cfg"
   }
+
+  provisioner "local-exec" {
+    command = "echo '[DEFAULT]\nuser=${var.user_ocid}\nfingerprint=${var.fingerprint}\nkey_file=${var.key_file}\ntenancy=${var.tenancy}\nregion=${var.region}' >> scripts/config"
+  }
 }
 
 
@@ -28,7 +32,7 @@ resource "null_resource" "userdata-scripts" {
       user = "${var.instance_user}"
       private_key = "${var.ssh_private_key}"
     }
-    source      = "userdata"
+    source      = "./userdata"
     destination = "/home/opc/"
   }
 }
@@ -100,7 +104,9 @@ resource "null_resource" "oci-cli-config" {
     inline = [
       "chmod +x /tmp/install_oci_cli.sh",
       "chmod +x /tmp/oci_cli.sh",
-      "sudo /tmp/oci_cli.sh"
+      "chmod +x /tmp/oci_config.sh",
+      "sudo /tmp/oci_cli.sh",
+      "sudo /tmp/oci_config.sh"
     ]
   }
 }

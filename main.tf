@@ -15,10 +15,10 @@ module "compute" {
   ssh_private_key = "${var.ssh_authorized_private_key}"
   instance_shape = "${var.instance_shape}"
   image_ocid = "${var.image_ocid}"
-  subnet = "${module.vcn.subnet2_ocid}"
+  subnet = "${module.vcn.subnet3_ocid}"
   name = "${var.compute_name}"
   label = "${var.compute_label}"
-  availability_domain = "${module.vcn.subnet2_ad}"
+  availability_domain = "${module.vcn.subnet3_ad}"
   timeout = "${var.timeout}"
 }
 
@@ -31,6 +31,11 @@ module "app-config" {
   instance_user = "${var.instance_user}"
   docker_user = "${var.docker_user}"
   docker_password = "${var.docker_password}"
+  user_ocid = "${var.user_ocid}"
+  fingerprint = "${var.fingerprint}"
+  key_file = "/home/opc/userdata/eshneken-bmcs.pem"
+  tenancy = "${var.tenancy_ocid}"
+  region = "${var.region}"
 }
 
 output "Jenkins IP" {

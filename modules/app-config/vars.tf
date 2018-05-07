@@ -5,3 +5,8 @@ variable "public-ip" {}
 variable "instance_user" {}
 variable "docker_user" {}
 variable "docker_password" {}
+variable "user_ocid" {}
+variable "fingerprint" {}
+variable "key_file" {}
+variable "tenancy" {}
+variable "region" {}

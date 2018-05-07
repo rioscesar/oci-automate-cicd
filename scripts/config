@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaacnlcisahazqaqj7h5au76jksb32ckgs6o6anihyzxue6kmmsy3tq
+fingerprint=fb:93:b0:6c:ac:f2:42:c7:97:00:43:82:f3:27:97:91
+key_file=/home/opc/userdata/eshneken-bmcs.pem
+tenancy=ocid1.tenancy.oc1..aaaaaaaa4m5zwuyl5dlfsmbsraau4o2hdyd6zxrouzit4yeq3453y7sehcoq
+region=us-ashburn-1
