@@ -118,6 +118,3 @@ docker image rm store/oracle/weblogic:12.2.1.2
 ```
 where **REGISTRY_IP** is replaced with the **public ip address** of the instance on which you've set up the Docker Registry.
 
-## The following steps involve using your local machine to configure the Chef DK, etc. 
-
-
